@@ -1,0 +1,8 @@
+services:
+    numeric.aquila.listener:
+        class: numeric\aquila\event\main_listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+        tags:
+            - { name: event.listener }
